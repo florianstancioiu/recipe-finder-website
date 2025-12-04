@@ -1,8 +1,10 @@
+import Logo from "../../images/logo.svg?react";
+
 const Header = () => {
   return (
     <header className="border-red border-b p-4">
       <div>
-        <p>Healthy Recipe Finder</p>
+        <Logo />
       </div>
     </header>
   );
