@@ -1,10 +1,13 @@
 import { Outlet } from "react-router";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const App = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 };
