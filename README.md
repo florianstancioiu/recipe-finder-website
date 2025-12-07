@@ -93,4 +93,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 ## Daily Summaries
 
 - **December 4th, 2025**: I created the repo, I added the following NPM packages: TailwindCSS, react-router and vite-plugin-svgr
-- **December 7th, 2025**: I worked on the mobile Header, HealthyMeals and WhatYouWillGet components
+- **December 7th, 2025**: I worked on the Header, HealthyMeals and WhatYouWillGet mobile components
