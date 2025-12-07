@@ -5,8 +5,12 @@ import SearchInSecondsIcon from "../../images/icon-search-in-seconds.svg?react";
 const WhatYouWillGet = () => {
   return (
     <div className="px-4 mb-8">
-      <div className="bg-neutral-0 p-1 rounded mb-16">
-        <img src="/images/image-home-hero-small.webp" alt="Home Hero" />
+      <div className="bg-neutral-0 rounded mb-16 p-1">
+        <img
+          src="/images/image-home-hero-small.webp"
+          alt="Home Hero"
+          className="rounded w-full"
+        />
       </div>
 
       <div>
