@@ -1,12 +1,14 @@
 import { Outlet } from "react-router";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import Header from "../components/UI/Header/Header";
+import Footer from "../components/UI/Footer/Footer";
 
 const App = () => {
   return (
     <div>
       <Header />
-      <Outlet />
+      <div className="pt-12">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

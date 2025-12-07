@@ -1,7 +1,15 @@
+import HealthyMeals from "../../components/HealthyMeals/HealthyMeals";
+import WhatYouWillGet from "../../components/WhatYouWillGet/WhatYouWillGet";
+import RealLife from "../../components/RealLife/RealLife";
+import CookSmarter from "../../components/CookSmarter/CookSmarter";
+
 const Home = () => {
   return (
     <>
-      <h1>Home</h1>
+      <HealthyMeals />
+      <WhatYouWillGet />
+      <RealLife />
+      <CookSmarter />
     </>
   );
 };
