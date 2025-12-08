@@ -1,5 +1,6 @@
 import HelpMorePeople from "../../components/HelpMorePeople/HelpMorePeople";
 import BulletPoints from "../../components/UI/BulletPoints/BulletPoints";
+import BeyondThePlate from "../../components/BeyondThePlate/BeyondThePlate";
 
 const whyWeExistOptions = [
   {
@@ -58,6 +59,7 @@ const About = () => {
         title="Our food philosophy"
         options={foodPhilosophyOptions}
       />
+      <BeyondThePlate />
     </>
   );
 };
