@@ -1,7 +1,9 @@
+import HelpMorePeople from "../../components/HelpMorePeople/HelpMorePeople";
+
 const About = () => {
   return (
     <>
-      <h1>About</h1>
+      <HelpMorePeople />
     </>
   );
 };

@@ -17,7 +17,7 @@ const Header = () => {
   }, [location]);
 
   return (
-    <header className="border-red border-b border-neutral-300 p-4 ">
+    <header className="border-b border-neutral-300 p-4 ">
       <div className="flex justify-between items-center relative">
         <NavLink to="/">
           <LogoSvg className="cursor-pointer" />

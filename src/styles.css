@@ -5,6 +5,7 @@
 @theme {
   --font-nunito-sans: "Nunito Sans", sans-serif;
   --font-nunito: "Nunito", sans-serif;
+
   --color-neutral-0: #fff;
   --color-neutral-100: #f6f5f1;
   --color-neutral-200: #e9ede8;
@@ -14,4 +15,5 @@
   --color-neutral-900: #163a34;
 
   --color-strong-950: #293241;
+  --color-orange-500: #fe9f6b;
 }
