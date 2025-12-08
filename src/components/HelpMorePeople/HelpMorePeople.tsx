@@ -2,7 +2,7 @@ import PagePill from "../UI/PagePill/PagePill";
 
 const HelpMorePeople = () => {
   return (
-    <div className="px-4 text-neutral-900 mb-10 pb-16 border-b border-neutral-300">
+    <div className="px-4 text-neutral-900 pb-16 border-b border-neutral-300">
       <div className="mb-10">
         <PagePill className="mb-6">Our mission</PagePill>
         <h1 className="font-nunito text-4xl font-bold mb-6">
