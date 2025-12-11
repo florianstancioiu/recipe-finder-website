@@ -1,5 +1,6 @@
 import Dropdown from "../UI/Dropdown/Dropdown";
 import ChevronDownSvg from "../../images/icon-chevron-down.svg?react";
+import SearchInput from "../UI/SearchInput/SearchInput";
 
 const prepOptions = [
   { id: 1, value: "0 minutes" },
@@ -26,6 +27,7 @@ const RecipesFilters = () => {
         <span>Max Cook Time</span>
         <ChevronDownSvg className="inline-block ml-2" />
       </Dropdown>
+      <SearchInput placeholder="Search by name or ingredient…" />
     </div>
   );
 };
