@@ -12,7 +12,7 @@ const Routes = () => {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="recipes" element={<Recipes />} />
-        <Route path="recipes/:id" element={<Recipe />} />
+        <Route path="recipes/:slug" element={<Recipe />} />
       </Route>
     </ReactRoutes>
   );
