@@ -12,8 +12,14 @@ const Header = () => {
   };
 
   // hide the menu when the location changes
+  // scroll to the top of the page when the location changes
   useEffect(() => {
     setShowMenu(false);
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   }, [location]);
 
   return (
