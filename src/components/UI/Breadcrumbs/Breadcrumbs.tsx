@@ -7,7 +7,7 @@ export type BreadcrumbsProps = {
 const Breadcrumbs = ({ title }: BreadcrumbsProps) => {
   return (
     <div className="text-neutral-900 font-semibold px-4 mb-4 font-nunito tracking-tighter">
-      <Link to="/" className="opacity-60">
+      <Link to="/recipes" className="opacity-60">
         Recipes
       </Link>
       <span className="opacity-60"> / </span>
