@@ -29,7 +29,7 @@ const BulletPoints = ({
 
   return (
     <div className={mergedClasses}>
-      <p className="text-4xl font-bold mb-10">{title}</p>
+      <p className="text-2xl font-bold mb-10 text-neutral-900">{title}</p>
       <ul className="list-none">
         {options.map((option) => (
           <li className="mb-6" key={option.id}>
