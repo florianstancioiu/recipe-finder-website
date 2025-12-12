@@ -1,4 +1,4 @@
-import Button from "../Button/Button";
+import Link from "../Link/Link";
 import { NavLink } from "react-router";
 
 const Menu = () => {
@@ -22,7 +22,9 @@ const Menu = () => {
             </NavLink>
           </li>
         </ul>
-        <Button className="w-full">Browse recipes</Button>
+        <Link to="/recipes" className="w-full inline-block text-center">
+          Browse recipes
+        </Link>
       </div>
     </div>
   );

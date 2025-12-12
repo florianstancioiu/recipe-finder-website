@@ -1,4 +1,4 @@
-import Button from "../UI/Button/Button";
+import Link from "../UI/Link/Link";
 
 const CookSmarter = () => {
   return (
@@ -10,7 +10,9 @@ const CookSmarter = () => {
         <p className="mb-8">
           Hit the button, pick a recipe, and get dinner on the table—fast.
         </p>
-        <Button>Browse recipes</Button>
+        <Link to="/recipes" className="inline-block">
+          Browse recipes
+        </Link>
       </div>
     </div>
   );

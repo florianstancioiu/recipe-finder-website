@@ -1,4 +1,4 @@
-import Button from "../UI/Button/Button";
+import Link from "../UI/Link/Link";
 
 const HealthyMeals = () => {
   return (
@@ -14,7 +14,9 @@ const HealthyMeals = () => {
         Discover eight quick, whole-food recipes that you can cook tonight—no
         processed junk, no guesswork.
       </p>
-      <Button>Start exploring</Button>
+      <Link to="/recipes" className="inline-block">
+        Start exploring
+      </Link>
     </div>
   );
 };
