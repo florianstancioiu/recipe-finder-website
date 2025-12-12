@@ -96,3 +96,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 - **December 7th, 2025**: I worked on the Header, HealthyMeals and WhatYouWillGet mobile components
 - **December 8th, 2025**: I finished the mobile version of Home page, and I also completed the mobile version of About page
 - **December 11th, 2025**: I worked on the `/recipes` mobile page and its components
+- **December 12th, 2025**: I worked on the `/recipes/:slug` mobile page and its components
