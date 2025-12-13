@@ -21,7 +21,7 @@ const BulletPoints = ({
   className,
   showTitle = true,
 }: BulletPointsProps) => {
-  const baseClasses = "px-4 py-12 border-b border-neutral-300";
+  const baseClasses = "px-4 py-12 border-b border-neutral-300 md:px-8";
   const mergedClasses = cn(
     baseClasses,
     className !== undefined ? className : ""
@@ -29,7 +29,9 @@ const BulletPoints = ({
 
   return (
     <div className={mergedClasses}>
-      <p className="text-2xl font-bold mb-10 text-neutral-900">{title}</p>
+      <p className="text-4xl font-bold mb-10 text-neutral-900 md:text-5xl md:font-extrabold">
+        {title}
+      </p>
       <ul className="list-none">
         {options.map((option) => (
           <li className="mb-6" key={option.id}>

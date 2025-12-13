@@ -2,10 +2,10 @@ import PagePill from "../UI/PagePill/PagePill";
 
 const HelpMorePeople = () => {
   return (
-    <div className="px-4 text-neutral-900 pb-16 border-b border-neutral-300">
+    <div className="px-4 text-neutral-900 pb-16 border-b border-neutral-300 md:px-8">
       <div className="mb-10">
         <PagePill className="mb-6">Our mission</PagePill>
-        <h1 className="font-nunito text-4xl font-bold mb-6">
+        <h1 className="font-nunito text-4xl font-extrabold mb-6 md:text-5xl">
           Help more people cook nourishing meals, more often.
         </h1>
         <p className="mb-4">
@@ -19,7 +19,7 @@ const HelpMorePeople = () => {
         </p>
       </div>
       <div>
-        <div className="bg-neutral-0 rounded p-1">
+        <div className="bg-neutral-0 rounded p-1 md:bg-none md:rounded-none md:p-0">
           <img
             alt="Home Hero"
             className="rounded w-full"

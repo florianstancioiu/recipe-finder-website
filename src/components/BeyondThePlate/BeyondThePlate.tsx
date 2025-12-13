@@ -1,8 +1,10 @@
 const BeyondThePlate = () => {
   return (
-    <div className="px-4 pt-12 mb-12">
+    <div className="px-4 pt-12 mb-12 md:px-8 md:pt-20 md:mb-20">
       <div className="mb-8">
-        <p className="text-4xl font-bold mb-5">Beyond the plate</p>
+        <p className="text-4xl font-bold mb-5 text-neutral-900 md:font-extrabold">
+          Beyond the plate
+        </p>
         <p className="mb-3">
           We believe food is a catalyst for community and well-being. By sharing
           approachable recipes, we hope to:
@@ -14,7 +16,7 @@ const BeyondThePlate = () => {
         </ul>
       </div>
       <div>
-        <div className="bg-neutral-0 rounded p-1">
+        <div className="bg-neutral-0 rounded p-1 md:bg-none md:rounded-none md:p-0">
           <img
             alt="Home Hero"
             className="rounded w-full"
