@@ -7,8 +7,12 @@ const RealLife = () => {
         </h2>
         <p className="mb-8">
           Cooking shouldn’t be complicated. These recipes come in under{" "}
-          <span className="font-bold">30 minutes</span> of active time, fit busy
-          schedules, and taste good enough to repeat.
+          <span className="font-bold md:hidden">30 minutes</span>
+          <span className="relative hidden md:inline">
+            <span className="absolute block w-full bg-orange-500 h-3 rounded-sm left-0 bottom-[3px] -z-1 font-bold text-neutral-800 font-nunito"></span>
+            30 minutes
+          </span>{" "}
+          of active time, fit busy schedules, and taste good enough to repeat.
         </p>
         <p className="mb-8">
           Whether you’re new to the kitchen or just need fresh ideas, we’ve got
