@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { useLocation } from "react-router";
 
 import { type Recipe as RecipeType } from "../Recipes/Recipes";
 
@@ -8,8 +9,14 @@ import Breadcrumbs from "../../components/UI/Breadcrumbs/Breadcrumbs";
 import MoreRecipes from "../../components/MoreRecipes/MoreRecipes";
 import RecipeNotFound from "../../components/RecipeNotFound/RecipeNotFound";
 
+import { scrollToTop } from "../../utils/functions";
+import usePageTitle from "../../hooks/usePageTitle";
+
 // TODO: Refactor page to use useContext and useReducer
 const Recipe = () => {
+  usePageTitle("Loading Recipe - Recipe Finder");
+
+  const location = useLocation();
   const [recipes, setRecipes] = useState<RecipeType[]>([]);
   const [recipe, setRecipe] = useState<RecipeType | null>(null);
   const { slug } = useParams();
@@ -29,15 +36,24 @@ const Recipe = () => {
 
         setRecipe(typeof currentRecipe === "undefined" ? null : currentRecipe);
         setRecipes(jsonResult);
+
+        if (currentRecipe) {
+          document.title = `${currentRecipe.title} - Recipe Finder`;
+        } else {
+          document.title = "404 - Recipe not found - Recipe Finder";
+        }
       } catch (err) {
         const error = err as Error;
 
         console.error(error.message);
+
+        document.title = "404 - Recipe not found - Recipe Finder";
       }
     };
 
     fetchRecipesData();
-  }, []);
+    scrollToTop();
+  }, [location]);
 
   return (
     <>

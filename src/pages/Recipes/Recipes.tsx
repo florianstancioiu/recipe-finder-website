@@ -3,6 +3,8 @@ import ExploreRecipes from "../../components/ExploreRecipes/ExploreRecipes";
 import RecipesFilters from "../../components/RecipesFilters/RecipesFilters";
 import RecipeItem from "../../components/RecipeItem/RecipeItem";
 
+import usePageTitle from "../../hooks/usePageTitle";
+
 export type Recipe = {
   id: number;
   title: string;
@@ -20,6 +22,8 @@ export type Recipe = {
 };
 
 const Recipes = () => {
+  usePageTitle("Recipes");
+
   const [recipes, setRecipes] = useState<Recipe[]>([]);
 
   useEffect(() => {

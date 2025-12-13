@@ -1,6 +1,7 @@
 import HelpMorePeople from "../../components/HelpMorePeople/HelpMorePeople";
 import BulletPoints from "../../components/UI/BulletPoints/BulletPoints";
 import BeyondThePlate from "../../components/BeyondThePlate/BeyondThePlate";
+import usePageTitle from "../../hooks/usePageTitle";
 
 const whyWeExistOptions = [
   {
@@ -51,6 +52,8 @@ const foodPhilosophyOptions = [
 ];
 
 const About = () => {
+  usePageTitle("About");
+
   return (
     <>
       <HelpMorePeople />
