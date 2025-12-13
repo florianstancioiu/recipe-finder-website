@@ -10,12 +10,9 @@ import MoreRecipes from "../../components/MoreRecipes/MoreRecipes";
 import RecipeNotFound from "../../components/RecipeNotFound/RecipeNotFound";
 
 import { scrollToTop } from "../../utils/functions";
-import usePageTitle from "../../hooks/usePageTitle";
 
 // TODO: Refactor page to use useContext and useReducer
 const Recipe = () => {
-  usePageTitle("Loading Recipe - Recipe Finder");
-
   const location = useLocation();
   const [recipes, setRecipes] = useState<RecipeType[]>([]);
   const [recipe, setRecipe] = useState<RecipeType | null>(null);
