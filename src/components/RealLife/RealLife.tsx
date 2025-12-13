@@ -1,8 +1,8 @@
 const RealLife = () => {
   return (
-    <div className="px-4 text-neutral-900 mb-10">
-      <div>
-        <h2 className="font-nunito text-4xl font-bold mb-4">
+    <div className="px-4 text-neutral-900 mb-10 md:px-8">
+      <div className="md:mb-10">
+        <h2 className="font-nunito text-4xl font-extrabold mb-4 md:mb-5">
           Built for real life
         </h2>
         <p className="mb-8">
@@ -16,7 +16,7 @@ const RealLife = () => {
         </p>
       </div>
       <div>
-        <div className="bg-neutral-0 rounded mb-16 p-1">
+        <div className="bg-neutral-0 rounded mb-16 p-1 md:mb-20">
           <img
             src="/images/image-home-real-life-small.webp"
             alt="Built for real life"

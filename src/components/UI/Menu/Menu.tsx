@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 const Menu = () => {
   return (
-    <div className="absolute left-0 top-14 z-10 w-full">
+    <div className="absolute left-0 top-14 z-20 w-full">
       <div className="bg-neutral-0 border border-neutral-300 rounded-xl p-2">
         <ul className="list-none">
           <li className="px-2 py-3">
