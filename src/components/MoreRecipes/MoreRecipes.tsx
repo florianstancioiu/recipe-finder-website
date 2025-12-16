@@ -19,7 +19,7 @@ const MoreRecipes = ({ recipes, currentRecipeSlug }: MoreRecipesProps) => {
   threeRandomRecipes = threeRandomRecipes.slice(0, 3);
 
   return (
-    <div className="px-4 pb-12 mb-12 border-b border-neutral-300">
+    <div className="px-4 pb-12 mb-12 border-b border-neutral-300 md:px-8">
       <h2 className="text-3xl font-bold mb-10 text-neutral-900">
         More recipes
       </h2>

@@ -29,7 +29,7 @@ const BulletPoints = ({
 
   return (
     <div className={mergedClasses}>
-      <p className="text-4xl font-bold mb-10 text-neutral-900 md:text-5xl md:font-extrabold">
+      <p className="text-4xl font-bold mb-10 text-neutral-900 md:font-extrabold">
         {title}
       </p>
       <ul className="list-none">
