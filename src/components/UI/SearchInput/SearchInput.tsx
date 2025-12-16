@@ -1,19 +1,25 @@
 import { useId } from "react";
+import { cn } from "tailwind-cn";
 
 import SearchSvg from "../../../images/icon-search.svg?react";
 
 export type SearchInputProps = {
   placeholder: string;
+  className?: string;
 };
 
-const SearchInput = ({ placeholder }: SearchInputProps) => {
+const SearchInput = ({ placeholder, className }: SearchInputProps) => {
   const searchInputId = useId();
 
+  const baseClasses =
+    "relative w-full block text-center bg-neutral-0 rounded-xl border border-neutral-300 py-2.5 font-normal text-neutral-900 cursor-pointer";
+  const mergedClasses = cn(
+    baseClasses,
+    className !== undefined ? className : ""
+  );
+
   return (
-    <label
-      htmlFor={searchInputId}
-      className="relative w-full block text-center bg-neutral-0 rounded-xl border border-neutral-300 py-2.5 font-normal text-neutral-900 cursor-pointer"
-    >
+    <label htmlFor={searchInputId} className={mergedClasses}>
       <SearchSvg className="absolute left-3 top-3.5" />
       <input
         id={searchInputId}

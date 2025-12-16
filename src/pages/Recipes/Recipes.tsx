@@ -51,11 +51,11 @@ const Recipes = () => {
       <ExploreRecipes />
       <RecipesFilters />
 
-      <div className="px-4 mb-10">
+      <main className="px-4 mb-10 md:px-8">
         {recipes.map((recipe) => (
           <RecipeItem key={recipe.id} {...recipe} />
         ))}
-      </div>
+      </main>
     </>
   );
 };

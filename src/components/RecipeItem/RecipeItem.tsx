@@ -17,7 +17,7 @@ const RecipeItem = ({
   cookMinutes,
 }: RecipeItemProps) => {
   return (
-    <div className="mt-6 rounded-xl bg-neutral-0 p-2 border border-neutral-300">
+    <div className="mt-6 rounded-xl bg-neutral-0 p-2 border border-neutral-300 md:mt-8">
       <div className="mb-4">
         <img className="rounded-xl w-full" src={image.large} alt={title} />
       </div>
@@ -26,7 +26,7 @@ const RecipeItem = ({
           {title}
         </h2>
         <p className="mb-4">{overview}</p>
-        <div className="text-neutral-900">
+        <div className="text-neutral-900 text-base font-medium">
           <p className="inline-block mr-4">
             <ServingsSvg className="inline-block mr-1.5" />
             <span>Servings: {servings}</span>
@@ -43,7 +43,7 @@ const RecipeItem = ({
       </div>
       <Link
         to={`/recipes/${slug}`}
-        className="w-full rounded-4xl block text-center"
+        className="w-full rounded-4xl block text-center text-base"
       >
         View Recipe
       </Link>

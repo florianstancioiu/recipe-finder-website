@@ -18,16 +18,19 @@ const cookOptions = [
 
 const RecipesFilters = () => {
   return (
-    <div className="px-4">
-      <Dropdown options={prepOptions}>
+    <div className="px-4 md:grid md:gap-x-3 md:grid-cols-4 md:px-8">
+      <Dropdown options={prepOptions} className="md:mb-0">
         <span>Max Prep Time</span>
         <ChevronDownSvg className="inline-block ml-2" />
       </Dropdown>
-      <Dropdown options={cookOptions}>
+      <Dropdown options={cookOptions} className="md:mb-0">
         <span>Max Cook Time</span>
         <ChevronDownSvg className="inline-block ml-2" />
       </Dropdown>
-      <SearchInput placeholder="Search by name or ingredient…" />
+      <SearchInput
+        placeholder="Search by name or ingredient…"
+        className="md:col-span-2"
+      />
     </div>
   );
 };
