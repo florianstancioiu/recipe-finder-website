@@ -1,7 +1,7 @@
 import Link from "../Link/Link";
 import { NavLink } from "react-router";
 
-const Menu = () => {
+const MobileMenu = () => {
   return (
     <div className="absolute left-0 top-14 z-20 w-full">
       <div className="bg-neutral-0 border border-neutral-300 rounded-xl p-2">
@@ -30,4 +30,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default MobileMenu;

@@ -1,11 +1,11 @@
 const RealLife = () => {
   return (
-    <div className="px-4 text-neutral-900 mb-10 md:px-8">
-      <div className="md:mb-10">
+    <div className="px-4 text-neutral-900 mb-10 md:px-8 xl:px-28 xl:flex xl:items-center">
+      <div className="md:mb-10 xl:w-[50%]">
         <h2 className="font-nunito text-4xl font-extrabold mb-4 md:mb-5">
           Built for real life
         </h2>
-        <p className="mb-8">
+        <p className="mb-8 xl:max-w-[510px]">
           Cooking shouldn’t be complicated. These recipes come in under{" "}
           <span className="font-bold md:hidden">30 minutes</span>
           <span className="relative hidden md:inline font-bold text-neutral-800 font-nunito">
@@ -14,17 +14,17 @@ const RealLife = () => {
           </span>{" "}
           of active time, fit busy schedules, and taste good enough to repeat.
         </p>
-        <p className="mb-8">
+        <p className="mb-8 xl:max-w-[510px]">
           Whether you’re new to the kitchen or just need fresh ideas, we’ve got
           you covered.
         </p>
       </div>
-      <div>
-        <div className="bg-neutral-0 rounded mb-16 p-1 md:mb-20">
+      <div className="xl:w-[50%]">
+        <div className="bg-neutral-0 rounded mb-16 p-1 md:mb-20 xl:p-0 xl:bg-none">
           <img
             src="/images/image-home-real-life-small.webp"
             alt="Built for real life"
-            className="rounded w-full"
+            className="rounded w-full xl:rounded-xl"
           />
         </div>
       </div>
