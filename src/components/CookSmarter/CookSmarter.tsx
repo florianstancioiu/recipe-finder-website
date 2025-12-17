@@ -5,9 +5,9 @@ import KnifeSvg from "../../images/pattern-knife.svg?react";
 const CookSmarter = () => {
   return (
     <div className="px-4 text-neutral-900 mb-10 text-center md:px-8 md:mb-0">
-      <div className="bg-neutral-200 py-12 px-4 rounded-2xl md:py-20 relative overflow-hidden">
-        <KnifeSvg className="hidden md:block md:absolute md:right-[-35px] md:top-[-35px] md:w-[170px] md:h-[170px] " />
-        <ForkSvg className="hidden md:block md:absolute md:left-[-50px] md:bottom-[-25px] md:w-[170px] md:h-[170px]" />
+      <div className="bg-neutral-200 py-12 px-4 rounded-2xl md:py-20 relative overflow-hidden xl:py-24">
+        <KnifeSvg className="hidden md:block md:absolute md:right-[-35px] md:top-[-35px] md:w-[170px] md:h-[170px] xl:h-[340px] xl:w-[340px] xl:right-[-70px] xl:top-[25px]" />
+        <ForkSvg className="hidden md:block md:absolute md:left-[-50px] md:bottom-[-25px] md:w-[170px] md:h-[170px] xl:h-[390px] xl:w-[315px] xl:left-[-70px]" />
         <div className="md:relative md:z-10">
           <h2 className="font-nunito text-4xl font-extrabold mb-4 md:text-5xl">
             Ready to cook smarter?
