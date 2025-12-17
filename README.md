@@ -98,3 +98,5 @@ Use this section to outline areas that you want to continue focusing on in futur
 - **December 11th, 2025**: I worked on the `/recipes` mobile page and its components
 - **December 12th, 2025**: I worked on the `/recipes/:slug` mobile page and its components
 - **December 13th, 2025**: I worked on the tablet designs for `/` (home) and `/about` pages
+- **December 16th, 2025**: I worked on the tablet designs for `/recipes` and `/recipes/:slug` pages and I also worked on the desktop version for `/` (home)
+- **December 17th, 2025**: I worked on the desktop designs for `/about` and `/recipes` pages
