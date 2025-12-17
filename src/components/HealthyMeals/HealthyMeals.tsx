@@ -2,7 +2,7 @@ import Link from "../UI/Link/Link";
 
 const HealthyMeals = () => {
   return (
-    <div className="px-4 text-neutral-900 mb-10 md:px-8 xl:text-center xl:mb-20">
+    <div className="px-4 text-neutral-900 mb-10 md:px-8 xl:text-center xl:mb-20 xl:max-w-dsktp-md xl:mx-auto">
       <div className="relative z-10">
         <h1 className="font-nunito text-5xl font-bold mb-4 md:text-6xl xl:text-7xl">
           <span className="relative">

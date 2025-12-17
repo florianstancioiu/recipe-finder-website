@@ -1,6 +1,6 @@
 const RealLife = () => {
   return (
-    <div className="px-4 text-neutral-900 mb-10 md:px-8 xl:px-28 xl:flex xl:items-center">
+    <div className="px-4 text-neutral-900 mb-10 md:px-8 xl:flex xl:items-center xl:max-w-dsktp-md xl:mx-auto">
       <div className="md:mb-10 xl:w-[50%]">
         <h2 className="font-nunito text-4xl font-extrabold mb-4 md:mb-5">
           Built for real life

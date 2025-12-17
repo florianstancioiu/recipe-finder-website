@@ -4,7 +4,7 @@ import TikTokIcon from "../../../images/icon-tiktok.svg?react";
 
 const Footer = () => {
   return (
-    <footer className="md:flex md:justify-between md:items-center md:flex-row-reverse md:px-8 md:py-10">
+    <footer className="md:flex md:justify-between md:items-center md:flex-row-reverse md:px-8 md:py-10 xl:max-w-dsktp-md xl:mx-auto">
       <div className="flex justify-center gap-6 items-center mb-6 select-none md:mb-0">
         <InstagramIcon className="cursor-pointer" />
         <BlueSkyIcon className="cursor-pointer" />
