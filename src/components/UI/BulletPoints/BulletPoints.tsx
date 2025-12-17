@@ -21,7 +21,8 @@ const BulletPoints = ({
   className,
   showTitle = true,
 }: BulletPointsProps) => {
-  const baseClasses = "px-4 py-12 border-b border-neutral-300 md:px-8";
+  const baseClasses =
+    "px-4 py-12 border-b border-neutral-300 md:px-8 xl:max-w-dsktp-md xl:mx-auto xl:px-0 xl:flex xl:justify-between xl:items-top xl:gap-x-16";
   const mergedClasses = cn(
     baseClasses,
     className !== undefined ? className : ""
@@ -29,7 +30,7 @@ const BulletPoints = ({
 
   return (
     <div className={mergedClasses}>
-      <p className="text-4xl font-bold mb-10 text-neutral-900 md:font-extrabold">
+      <p className="text-4xl font-bold mb-10 text-neutral-900 md:font-extrabold xl:min-w-[372px]">
         {title}
       </p>
       <ul className="list-none">

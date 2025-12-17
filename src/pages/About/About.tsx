@@ -1,6 +1,7 @@
 import HelpMorePeople from "../../components/HelpMorePeople/HelpMorePeople";
 import BulletPoints from "../../components/UI/BulletPoints/BulletPoints";
 import BeyondThePlate from "../../components/BeyondThePlate/BeyondThePlate";
+import CookSmarter from "../../components/CookSmarter/CookSmarter";
 import usePageTitle from "../../hooks/usePageTitle";
 
 const whyWeExistOptions = [
@@ -63,6 +64,7 @@ const About = () => {
         options={foodPhilosophyOptions}
       />
       <BeyondThePlate />
+      <CookSmarter />
     </>
   );
 };
