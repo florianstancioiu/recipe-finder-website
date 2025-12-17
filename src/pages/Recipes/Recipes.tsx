@@ -51,7 +51,7 @@ const Recipes = () => {
       <ExploreRecipes />
       <RecipesFilters />
 
-      <main className="px-4 mb-10 md:px-8">
+      <main className="px-4 mb-10 md:px-8 xl:max-w-dsktp-md xl:mx-auto xl:px-0 xl:grid xl:grid-cols-3 xl:gap-8 xl:pt-6">
         {recipes.map((recipe) => (
           <RecipeItem key={recipe.id} {...recipe} />
         ))}
