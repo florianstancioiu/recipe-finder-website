@@ -30,12 +30,12 @@ const BulletPoints = ({
 
   return (
     <div className={mergedClasses}>
-      <p className="text-4xl font-bold mb-10 text-neutral-900 md:font-extrabold xl:min-w-[372px]">
+      <p className="text-4xl font-bold mb-10 text-neutral-900 md:font-extrabold xl:min-w-[372px] xl:mb-2 xl:text-2xl">
         {title}
       </p>
       <ul className="list-none">
         {options.map((option) => (
-          <li className="mb-6" key={option.id}>
+          <li className="mb-6 xl:mb-2" key={option.id}>
             <div className="flex gap-4">
               <div>
                 <BulletPointIcon />

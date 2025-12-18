@@ -19,11 +19,11 @@ const MoreRecipes = ({ recipes, currentRecipeSlug }: MoreRecipesProps) => {
   threeRandomRecipes = threeRandomRecipes.slice(0, 3);
 
   return (
-    <div className="px-4 pb-12 mb-12 border-b border-neutral-300 md:px-8">
-      <h2 className="text-3xl font-bold mb-10 text-neutral-900">
+    <div className="px-4 pb-12 mb-12 border-b border-neutral-300 md:px-8 xl:max-w-dsktp-md xl:mx-auto xl:px-0">
+      <h2 className="text-3xl font-bold mb-10 text-neutral-900 xl:mb-6">
         More recipes
       </h2>
-      <div>
+      <div className="xl:grid xl:grid-cols-3 xl:gap-x-8">
         {threeRandomRecipes.map(
           ({
             id,
@@ -38,7 +38,7 @@ const MoreRecipes = ({ recipes, currentRecipeSlug }: MoreRecipesProps) => {
             return (
               <div
                 key={id}
-                className="mt-8 rounded-xl bg-neutral-0 p-2 border border-neutral-300"
+                className="mt-8 rounded-xl bg-neutral-0 p-2 border border-neutral-300 xl:mt-0 xl:flex xl:flex-col xl:justify-between"
               >
                 <div className="mb-4">
                   <img

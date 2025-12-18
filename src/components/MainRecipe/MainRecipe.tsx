@@ -28,7 +28,7 @@ const MainRecipe = ({
   const mappedInstructionsOptions = mapBulletOptions(instructions);
 
   return (
-    <div className="mt-4 px-4 pb-12 mb-12 border-b border-neutral-300 md:px-8">
+    <div className="mt-4 px-4 pb-12 mb-12 border-b border-neutral-300 md:px-8 xl:max-w-dsktp-md xl:mx-auto xl:grid xl:grid-cols-2 xl:gap-x-10 xl:px-0">
       <div className="mb-10">
         <img className="rounded-xl w-full" src={image.large} alt={title} />
       </div>
@@ -55,13 +55,13 @@ const MainRecipe = ({
           title="Ingredients"
           options={mappedIngredientsOptions}
           showTitle={false}
-          className="px-0 border-b-0 pb-0 pt-5 md:px-0"
+          className="px-0 border-b-0 pb-0 pt-5 md:px-0 xl:flex xl:flex-col"
         />
         <BulletPoints
           title="Instructions"
           options={mappedInstructionsOptions}
           showTitle={false}
-          className="px-0 border-b-0 pb-0 pt-5 md:px-0"
+          className="px-0 border-b-0 pb-0 pt-5 md:px-0 xl:flex xl:flex-col xl:pt-0"
         />
       </div>
     </div>
