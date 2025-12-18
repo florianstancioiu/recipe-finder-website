@@ -42,17 +42,38 @@ const Header = () => {
         </NavLink>
         <ul className="list-none flex justify-between items-center text-lg font-semibold">
           <li className="px-2 py-3">
-            <NavLink to="/" className={`text-strong-950`}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-strong-950 border-b-4 border-orange-500"
+                  : "text-strong-950"
+              }
+            >
               Home
             </NavLink>
           </li>
           <li className="px-2 py-3">
-            <NavLink to="/about" className={`text-strong-950`}>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-strong-950 border-b-4 border-orange-500"
+                  : "text-strong-950"
+              }
+            >
               About
             </NavLink>
           </li>
           <li className="px-2 py-3">
-            <NavLink to="/recipes" className={`text-strong-950`}>
+            <NavLink
+              to="/recipes"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-strong-950 border-b-4 border-orange-500"
+                  : "text-strong-950"
+              }
+            >
               Recipes
             </NavLink>
           </li>
