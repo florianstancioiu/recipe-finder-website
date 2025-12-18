@@ -36,7 +36,7 @@ const Header = () => {
         </div>
         {showMenu && <MobileMenu />}
       </div>
-      <div className="hidden xl:flex justify-between z-20 relative xl:max-w-dsktp-lg xl:mx-auto xl:px-16">
+      <div className="hidden xl:flex justify-between items-center z-20 relative xl:max-w-dsktp-lg xl:mx-auto xl:px-16">
         <NavLink to="/">
           <LogoSvg className="cursor-pointer" />
         </NavLink>
