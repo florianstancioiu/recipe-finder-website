@@ -3,7 +3,8 @@ import { cn } from "tailwind-cn";
 
 export type DropdownOption = {
   id: number;
-  value: string;
+  value: number;
+  title: string;
   isActive: boolean;
 };
 
@@ -71,7 +72,7 @@ const Dropdown = ({
                 <span className="w-2 h-2 rounded-full bg-strong-950"></span>
               </span>
             )}
-            <span className="text-strong-950">{option.value}</span>
+            <span className="text-strong-950">{option.title}</span>
           </li>
         ))}
         <li

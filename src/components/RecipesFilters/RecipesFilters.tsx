@@ -6,17 +6,17 @@ import { type DropdownOption } from "../UI/Dropdown/Dropdown";
 
 const RecipesFilters = () => {
   const [prepOptions, setPrepOptions] = useState([
-    { id: 1, value: "0 minutes", isActive: false },
-    { id: 2, value: "5 minutes", isActive: false },
-    { id: 3, value: "10 minutes", isActive: false },
+    { id: 1, value: 0, title: "0 minutes", isActive: false },
+    { id: 2, value: 5, title: "5 minutes", isActive: false },
+    { id: 3, value: 10, title: "10 minutes", isActive: false },
   ]);
 
   const [cookOptions, setCookOptions] = useState([
-    { id: 1, value: "0 minutes", isActive: false },
-    { id: 2, value: "5 minutes", isActive: false },
-    { id: 3, value: "10 minutes", isActive: false },
-    { id: 4, value: "15 minutes", isActive: false },
-    { id: 5, value: "20 minutes", isActive: false },
+    { id: 1, value: 0, title: "0 minutes", isActive: false },
+    { id: 2, value: 5, title: "5 minutes", isActive: false },
+    { id: 3, value: 10, title: "10 minutes", isActive: false },
+    { id: 4, value: 15, title: "15 minutes", isActive: false },
+    { id: 5, value: 20, title: "20 minutes", isActive: false },
   ]);
 
   const onPrepClick = (option: DropdownOption) => {
