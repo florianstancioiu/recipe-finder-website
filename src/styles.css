@@ -19,4 +19,7 @@
 
   --container-dsktp-lg: 1440px;
   --container-dsktp-md: 1192px;
+
+  --shadow-focus-visible: 0 0 0 2px var(--colors-neutral-100, #f6f5f1),
+    0 0 0 4px var(--colors-neutral-900, #163a34);
 }

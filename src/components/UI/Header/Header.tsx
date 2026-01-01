@@ -37,7 +37,10 @@ const Header = () => {
         {showMenu && <MobileMenu />}
       </div>
       <div className="hidden xl:flex justify-between items-center z-20 relative xl:max-w-dsktp-lg xl:mx-auto xl:px-16">
-        <NavLink to="/">
+        <NavLink
+          to="/"
+          className={`focus-visible:shadow-focus-visible focus-visible:rounded-lg focus-visible:outline-none`}
+        >
           <LogoSvg className="cursor-pointer" />
         </NavLink>
         <ul className="list-none flex justify-between items-center text-lg font-semibold">
@@ -46,8 +49,8 @@ const Header = () => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-strong-950 border-b-4 border-orange-500"
-                  : "text-strong-950 hover:border-b-4 hover:border-orange-500"
+                  ? "text-strong-950 border-b-4 border-orange-500 focus-visible:shadow-focus-visible focus-visible:rounded-lg focus-visible:outline-none"
+                  : "text-strong-950 hover:border-b-4 hover:border-orange-500 focus-visible:shadow-focus-visible focus-visible:rounded-lg focus-visible:outline-none"
               }
             >
               Home
@@ -58,8 +61,8 @@ const Header = () => {
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "text-strong-950 border-b-4 border-orange-500"
-                  : "text-strong-950 hover:border-b-4 hover:border-orange-500"
+                  ? "text-strong-950 border-b-4 border-orange-500 focus-visible:shadow-focus-visible focus-visible:rounded-lg focus-visible:outline-none"
+                  : "text-strong-950 hover:border-b-4 hover:border-orange-500 focus-visible:shadow-focus-visible focus-visible:rounded-lg focus-visible:outline-none"
               }
             >
               About
@@ -70,8 +73,8 @@ const Header = () => {
               to="/recipes"
               className={({ isActive }) =>
                 isActive
-                  ? "text-strong-950 border-b-4 border-orange-500"
-                  : "text-strong-950 hover:border-b-4 hover:border-orange-500"
+                  ? "text-strong-950 border-b-4 border-orange-500 focus-visible:shadow-focus-visible focus-visible:rounded-lg focus-visible:outline-none"
+                  : "text-strong-950 hover:border-b-4 hover:border-orange-500 focus-visible:shadow-focus-visible focus-visible:rounded-lg focus-visible:outline-none"
               }
             >
               Recipes

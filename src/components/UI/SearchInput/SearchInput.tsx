@@ -12,7 +12,7 @@ const SearchInput = ({ placeholder, className }: SearchInputProps) => {
   const searchInputId = useId();
 
   const baseClasses =
-    "relative w-full block text-center bg-neutral-0 rounded-xl border border-neutral-300 py-2.5 font-normal text-neutral-900 cursor-pointer focus-within:outline focus-within:outline-neutral-900 hover:border-neutral-900 hover:cursor-pointer";
+    "relative w-full block text-center bg-neutral-0 rounded-xl border border-neutral-300 py-2.5 font-normal text-neutral-900 cursor-pointer focus-within:outline focus-within:outline-neutral-900 hover:border-neutral-900 hover:cursor-pointer focus-within:outline-2 focus-within:outline-offset-3 focus-within:outline-neutral-900";
   const mergedClasses = cn(
     baseClasses,
     className !== undefined ? className : ""
