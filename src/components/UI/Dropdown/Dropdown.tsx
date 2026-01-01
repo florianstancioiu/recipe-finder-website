@@ -51,7 +51,8 @@ const Dropdown = ({
     <div className={mergedClasses}>
       <div
         onClick={onClickTitleHandler}
-        className="w-full text-center bg-neutral-0 rounded-xl border border-neutral-300 py-2.5 font-normal text-neutral-900 cursor-pointer select-none text-lg"
+        tabIndex={0}
+        className="w-full text-center bg-neutral-0 rounded-xl border border-neutral-300 py-2.5 font-normal text-neutral-900 cursor-pointer select-none text-lg hover:border-neutral-900"
       >
         {children}
       </div>

@@ -47,7 +47,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive
                   ? "text-strong-950 border-b-4 border-orange-500"
-                  : "text-strong-950"
+                  : "text-strong-950 hover:border-b-4 hover:border-orange-500"
               }
             >
               Home
@@ -59,7 +59,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive
                   ? "text-strong-950 border-b-4 border-orange-500"
-                  : "text-strong-950"
+                  : "text-strong-950 hover:border-b-4 hover:border-orange-500"
               }
             >
               About
@@ -71,7 +71,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive
                   ? "text-strong-950 border-b-4 border-orange-500"
-                  : "text-strong-950"
+                  : "text-strong-950 hover:border-b-4 hover:border-orange-500"
               }
             >
               Recipes
