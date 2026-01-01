@@ -43,7 +43,7 @@ const MoreRecipes = ({ recipes, currentRecipeSlug }: MoreRecipesProps) => {
                 <div className="mb-4">
                   <img
                     className="rounded-xl w-full"
-                    src={image.large}
+                    src={"../" + image.large}
                     alt={title}
                   />
                 </div>

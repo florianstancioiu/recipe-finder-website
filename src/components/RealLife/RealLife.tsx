@@ -22,7 +22,7 @@ const RealLife = () => {
       <div className="xl:w-[50%]">
         <div className="bg-neutral-0 rounded mb-16 p-1 md:mb-20 xl:p-0 xl:bg-none">
           <img
-            src="/images/image-home-real-life-small.webp"
+            src="./images/image-home-real-life-small.webp"
             alt="Built for real life"
             className="rounded w-full xl:rounded-xl"
           />

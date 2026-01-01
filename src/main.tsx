@@ -6,7 +6,7 @@ import Routes from "./routes";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/recipe-finder-website/">
       <Routes />
     </BrowserRouter>
   </StrictMode>

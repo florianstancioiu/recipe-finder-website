@@ -11,7 +11,7 @@ const WhatYouWillGet = () => {
       <div className="px-4 mb-8 md:px-8 md:pb-20 md:mb-20 border-b border-neutral-300 relative z-10 xl:max-w-dsktp-md xl:mx-auto">
         <div className="bg-neutral-0 rounded mb-16 p-1 md:mb-20 xl:rounded-xl">
           <img
-            src="/images/image-home-hero-large.webp"
+            src="./images/image-home-hero-large.webp"
             alt="Home Hero"
             className="rounded w-full xl:rounded-xl"
           />

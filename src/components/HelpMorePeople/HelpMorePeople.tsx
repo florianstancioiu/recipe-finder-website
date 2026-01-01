@@ -23,7 +23,7 @@ const HelpMorePeople = () => {
           <img
             alt="Home Hero"
             className="rounded w-full xl:rounded-xl"
-            src="/images/image-about-our-mission-small.webp"
+            src="./images/image-about-our-mission-small.webp"
           />
         </div>
       </div>

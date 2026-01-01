@@ -20,7 +20,7 @@ const BeyondThePlate = () => {
           <img
             alt="Home Hero"
             className="rounded w-full xl:rounded-xl"
-            src="/images/image-about-beyond-the-plate-small.webp"
+            src="./images/image-about-beyond-the-plate-small.webp"
           />
         </div>
       </div>
