@@ -64,6 +64,7 @@ const Dropdown = ({
             onClick={() => onOptionClickHandler(option)}
             key={option.id}
             className="p-2 select-none cursor-pointer"
+            tabIndex={0}
           >
             {!option.isActive && (
               <span className="inline-block mr-2 w-4 h-4 border rounded-full border-neutral-400"></span>
