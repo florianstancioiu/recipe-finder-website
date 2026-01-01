@@ -12,7 +12,7 @@ const SearchInput = ({ placeholder, className }: SearchInputProps) => {
   const searchInputId = useId();
 
   const baseClasses =
-    "relative w-full block text-center bg-neutral-0 rounded-xl border border-neutral-300 py-2.5 font-normal text-neutral-900 cursor-pointer focus-within:outline focus-within:outline-neutral-900";
+    "relative w-full block text-center bg-neutral-0 rounded-xl border border-neutral-300 py-2.5 font-normal text-neutral-900 cursor-pointer focus-within:outline focus-within:outline-neutral-900 hover:border-neutral-900 hover:cursor-pointer";
   const mergedClasses = cn(
     baseClasses,
     className !== undefined ? className : ""
@@ -23,7 +23,7 @@ const SearchInput = ({ placeholder, className }: SearchInputProps) => {
       <SearchSvg className="absolute left-3 top-3.5" />
       <input
         id={searchInputId}
-        className="bg-neutral-0 pl-10 focus-visible:border-none focus-visible:outline-none w-full"
+        className="bg-neutral-0 pl-10 focus-visible:border-none focus-visible:outline-none w-full hover:cursor-pointer"
         type="text"
         placeholder={placeholder}
       />
