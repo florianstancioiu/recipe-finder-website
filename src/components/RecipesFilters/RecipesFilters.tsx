@@ -1,27 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Dropdown from "../UI/Dropdown/Dropdown";
 import ChevronDownSvg from "../../images/icon-chevron-down.svg?react";
 import SearchInput from "../UI/SearchInput/SearchInput";
 import { type DropdownOption } from "../UI/Dropdown/Dropdown";
 
-const RecipesFilters = () => {
-  const [prepOptions, setPrepOptions] = useState([
-    { id: 1, value: 0, title: "0 minutes", isActive: false },
-    { id: 2, value: 5, title: "5 minutes", isActive: false },
-    { id: 3, value: 10, title: "10 minutes", isActive: false },
-  ]);
+export type AllFilters = {
+  prepOptions: DropdownOption[];
+  cookOptions: DropdownOption[];
+  searchKeyword: string;
+};
 
-  const [cookOptions, setCookOptions] = useState([
-    { id: 1, value: 0, title: "0 minutes", isActive: false },
-    { id: 2, value: 5, title: "5 minutes", isActive: false },
-    { id: 3, value: 10, title: "10 minutes", isActive: false },
-    { id: 4, value: 15, title: "15 minutes", isActive: false },
-    { id: 5, value: 20, title: "20 minutes", isActive: false },
-  ]);
+export type RecipesFilters = {
+  filters: AllFilters;
+  onChange: (filters: AllFilters) => void;
+};
+
+const RecipesFilters = ({ filters, onChange }: RecipesFilters) => {
+  const [localFilters, setLocalFilters] = useState<AllFilters>(filters);
+
+  useEffect(() => {
+    onChange(localFilters);
+  }, [JSON.stringify(localFilters)]);
 
   const onPrepClick = (option: DropdownOption) => {
-    setPrepOptions(
-      prepOptions
+    setLocalFilters({
+      ...localFilters,
+      prepOptions: localFilters.prepOptions
         .map((prepOption) => ({ ...prepOption, isActive: false }))
         .map((prepOption) => {
           if (prepOption.id === option.id) {
@@ -32,18 +36,24 @@ const RecipesFilters = () => {
           }
 
           return prepOption;
-        })
-    );
+        }),
+    });
   };
+
   const onPrepClear = () => {
-    setPrepOptions(
-      prepOptions.map((prepOption) => ({ ...prepOption, isActive: false }))
-    );
+    setLocalFilters({
+      ...localFilters,
+      prepOptions: localFilters.prepOptions.map((prepOption) => ({
+        ...prepOption,
+        isActive: false,
+      })),
+    });
   };
 
   const onCookClick = (option: DropdownOption) => {
-    setCookOptions(
-      cookOptions
+    setLocalFilters({
+      ...localFilters,
+      cookOptions: localFilters.cookOptions
         .map((cookOption) => ({ ...cookOption, isActive: false }))
         .map((cookOption) => {
           if (cookOption.id === option.id) {
@@ -54,20 +64,25 @@ const RecipesFilters = () => {
           }
 
           return cookOption;
-        })
-    );
+        }),
+    });
   };
+
   const onCookClear = () => {
-    setCookOptions(
-      cookOptions.map((cookOption) => ({ ...cookOption, isActive: false }))
-    );
+    setLocalFilters({
+      ...localFilters,
+      cookOptions: localFilters.cookOptions.map((cookOption) => ({
+        ...cookOption,
+        isActive: false,
+      })),
+    });
   };
 
   return (
     <div className="px-4 md:grid md:gap-x-3 md:grid-cols-2 md:px-8 xl:max-w-dsktp-md xl:mx-auto xl:gap-x-[500px] xl:px-0">
       <div className="md:grid-cols-2 md:grid md:gap-x-3">
         <Dropdown
-          options={prepOptions}
+          options={localFilters.prepOptions}
           onOptionClick={onPrepClick}
           onClear={onPrepClear}
           className="md:mb-0"
@@ -76,7 +91,7 @@ const RecipesFilters = () => {
           <ChevronDownSvg className="inline-block ml-2" />
         </Dropdown>
         <Dropdown
-          options={cookOptions}
+          options={localFilters.cookOptions}
           onOptionClick={onCookClick}
           onClear={onCookClear}
           className="md:mb-0"
