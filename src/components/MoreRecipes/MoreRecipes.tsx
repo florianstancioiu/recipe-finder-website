@@ -1,6 +1,7 @@
 import ServingsSvg from "../../images/icon-servings.svg?react";
 import PrepSvg from "../../images/icon-prep-time.svg?react";
 import CookSvg from "../../images/icon-cook-time.svg?react";
+import { fullUrl } from "../../utils/functions";
 
 import Link from "../UI/Link/Link";
 
@@ -43,7 +44,7 @@ const MoreRecipes = ({ recipes, currentRecipeSlug }: MoreRecipesProps) => {
                 <div className="mb-4">
                   <img
                     className="rounded-xl w-full"
-                    src={"../" + image.large}
+                    src={fullUrl(image.large)}
                     alt={title}
                   />
                 </div>
@@ -75,7 +76,7 @@ const MoreRecipes = ({ recipes, currentRecipeSlug }: MoreRecipesProps) => {
                 </Link>
               </div>
             );
-          }
+          },
         )}
       </div>
     </div>

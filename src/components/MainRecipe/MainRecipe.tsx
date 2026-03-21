@@ -4,6 +4,7 @@ import CookSvg from "../../images/icon-cook-time.svg?react";
 
 import { type Recipe } from "../../pages/Recipes/Recipes";
 import BulletPoints from "../UI/BulletPoints/BulletPoints";
+import { fullUrl } from "../../utils/functions";
 
 export type RecipeItemProps = Recipe;
 
@@ -32,7 +33,7 @@ const MainRecipe = ({
       <div className="mb-10">
         <img
           className="rounded-xl w-full"
-          src={"../" + image.large}
+          src={fullUrl(image.large)}
           alt={title}
         />
       </div>

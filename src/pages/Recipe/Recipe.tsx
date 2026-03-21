@@ -8,6 +8,7 @@ import MainRecipe from "../../components/MainRecipe/MainRecipe";
 import Breadcrumbs from "../../components/UI/Breadcrumbs/Breadcrumbs";
 import MoreRecipes from "../../components/MoreRecipes/MoreRecipes";
 import RecipeNotFound from "../../components/RecipeNotFound/RecipeNotFound";
+import { fullUrl } from "../../utils/functions";
 
 import { scrollToTop } from "../../utils/functions";
 
@@ -21,14 +22,15 @@ const Recipe = () => {
   useEffect(() => {
     const fetchRecipesData = async () => {
       try {
-        const response = await fetch("../data.json");
+        const url = fullUrl("data.json");
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error(`Response status: ${response.status}`);
         }
 
         const jsonResult = await response.json();
         const currentRecipe = jsonResult.find(
-          (recipe: RecipeType) => recipe.slug == slug
+          (recipe: RecipeType) => recipe.slug == slug,
         );
 
         setRecipe(typeof currentRecipe === "undefined" ? null : currentRecipe);
