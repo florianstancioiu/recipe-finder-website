@@ -23,14 +23,15 @@ This is a solution to the [Recipe finder website challenge on Frontend Mentor](h
 Users should be able to:
 
 - View the home, about, recipes index, and recipe detail pages
-- Search for recipes by name or ingredient
+- Search for recipes by name ~~or ingredient~~
 - Filter recipes by max prep or cook time
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./mobile-screenshot.png)
+![](./desktop-screenshot.png)
 
 ### Links
 
@@ -54,10 +55,12 @@ Users should be able to:
 ### What I learned
 
 - I learned how to implement filters correctly - I used ChatGPT for that.
+- I learned that I need to use the HashRouter in order for routes to work on Github Pages
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- I would add testing using React Testing Library
+- I would add Storybook to the project
 
 ### Useful resources
 
@@ -82,3 +85,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 - **December 17th, 2025**: I worked on the desktop designs for `/about` and `/recipes` pages
 - **December 18th, 2025**: I worked on the desktop design for `/recipes/:slug` page and I also worked on the RecipesFilter component
 - **January 1st, 2026**: I worked on the active, hover and focus states of the components
+- **March 21st, 2026**: I implemented the filter functionality in the `/recipes` route
