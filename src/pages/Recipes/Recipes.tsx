@@ -27,7 +27,7 @@ export type Recipe = {
 const Recipes = () => {
   usePageTitle("Recipes");
 
-  const [_recipes, setRecipes] = useState<Recipe[]>([]);
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [filteredRecipes, setFilteredRecipes] = useState<Recipe[]>([]);
   const [filters, setFilters] = useState<AllFilters>({
     prepOptions: [
@@ -68,18 +68,72 @@ const Recipes = () => {
   }, []);
 
   useEffect(() => {
-    const updateFilteredRecipes = () => {};
+    const updateFilteredRecipes = () => {
+      const prepTime = filters.prepOptions.find((option) => option.isActive);
+      const cookTime = filters.cookOptions.find((option) => option.isActive);
+      const { searchKeyword } = filters;
+
+      const updatedRecipes = recipes.filter((recipe) => {
+        if (prepTime && cookTime && searchKeyword) {
+          if (
+            recipe.prepMinutes <= prepTime.value &&
+            recipe.cookMinutes <= cookTime.value &&
+            recipe.title
+              .toLowerCase()
+              .includes(searchKeyword.trim().toLowerCase())
+          ) {
+            return true;
+          }
+          return false;
+        }
+
+        if (prepTime && cookTime) {
+          if (
+            recipe.prepMinutes <= prepTime.value &&
+            recipe.cookMinutes <= cookTime.value
+          ) {
+            return true;
+          }
+
+          return false;
+        }
+
+        let boolToBeReturned = true;
+
+        if (prepTime && recipe.prepMinutes > prepTime.value) {
+          boolToBeReturned = false;
+        }
+
+        if (cookTime && recipe.cookMinutes > cookTime.value) {
+          boolToBeReturned = false;
+        }
+
+        if (
+          searchKeyword &&
+          !recipe.title
+            .toLowerCase()
+            .includes(searchKeyword.trim().toLowerCase())
+        ) {
+          boolToBeReturned = false;
+        }
+
+        return boolToBeReturned;
+      });
+
+      setFilteredRecipes(updatedRecipes);
+    };
+
+    updateFilteredRecipes();
   }, [JSON.stringify(filters)]);
 
-  const handleFiltersChange = (filters: AllFilters) => {
-    setFilters(filters);
+  const handleFiltersChange = (updatedFilters: AllFilters) => {
+    setFilters(updatedFilters);
   };
 
   return (
     <>
       <ExploreRecipes />
       <RecipesFilters filters={filters} onChange={handleFiltersChange} />
-
       <main className="px-4 mb-10 md:px-8 xl:max-w-dsktp-md xl:mx-auto xl:px-0 xl:grid xl:grid-cols-3 xl:gap-8 xl:pt-6">
         {filteredRecipes.map((recipe) => (
           <RecipeItem key={recipe.id} {...recipe} />

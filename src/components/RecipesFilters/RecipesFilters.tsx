@@ -78,6 +78,13 @@ const RecipesFilters = ({ filters, onChange }: RecipesFilters) => {
     });
   };
 
+  const onSearchChange = (searchKeyword: string) => {
+    setLocalFilters({
+      ...localFilters,
+      searchKeyword,
+    });
+  };
+
   return (
     <div className="px-4 md:grid md:gap-x-3 md:grid-cols-2 md:px-8 xl:max-w-dsktp-md xl:mx-auto xl:gap-x-[500px] xl:px-0">
       <div className="md:grid-cols-2 md:grid md:gap-x-3">
@@ -100,7 +107,10 @@ const RecipesFilters = ({ filters, onChange }: RecipesFilters) => {
           <ChevronDownSvg className="inline-block ml-2" />
         </Dropdown>
       </div>
-      <SearchInput placeholder="Search by name or ingredient…" />
+      <SearchInput
+        onChange={onSearchChange}
+        placeholder="Search by name or ingredient…"
+      />
     </div>
   );
 };

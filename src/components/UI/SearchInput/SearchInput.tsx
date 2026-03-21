@@ -6,16 +6,21 @@ import SearchSvg from "../../../images/icon-search.svg?react";
 export type SearchInputProps = {
   placeholder: string;
   className?: string;
+  onChange: (searchKeyword: string) => void;
 };
 
-const SearchInput = ({ placeholder, className }: SearchInputProps) => {
+const SearchInput = ({
+  placeholder,
+  className,
+  onChange,
+}: SearchInputProps) => {
   const searchInputId = useId();
 
   const baseClasses =
     "relative w-full block text-center bg-neutral-0 rounded-xl border border-neutral-300 py-2.5 font-normal text-neutral-900 cursor-pointer focus-within:outline focus-within:outline-neutral-900 hover:border-neutral-900 hover:cursor-pointer focus-within:outline-2 focus-within:outline-offset-3 focus-within:outline-neutral-900";
   const mergedClasses = cn(
     baseClasses,
-    className !== undefined ? className : ""
+    className !== undefined ? className : "",
   );
 
   return (
@@ -25,6 +30,9 @@ const SearchInput = ({ placeholder, className }: SearchInputProps) => {
         id={searchInputId}
         className="bg-neutral-0 pl-10 focus-visible:border-none focus-visible:outline-none w-full hover:cursor-pointer"
         type="text"
+        onChange={(event) => {
+          onChange(event.target.value);
+        }}
         placeholder={placeholder}
       />
     </label>
