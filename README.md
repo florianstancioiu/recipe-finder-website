@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- URL: [https://florianstancioiu.github.io/recipe-finder-website](https://florianstancioiu.github.io/recipe-finder-website)
+- Frontend Mentor URL: [https://www.frontendmentor.io/solutions/recipe-finder-website-with-react-and-typescript-pYTOHgRSZw](https://www.frontendmentor.io/solutions/recipe-finder-website-with-react-and-typescript-pYTOHgRSZw)
 
 ## My process
 
@@ -59,8 +59,9 @@ Users should be able to:
 
 ### Continued development
 
-- I would add testing using React Testing Library
+- I would test the app using React Testing Library
 - I would add Storybook to the project
+- I would take my time to make the website more accessible to keyboard only users
 
 ### Useful resources
 
