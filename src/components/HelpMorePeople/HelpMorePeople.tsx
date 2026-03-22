@@ -1,3 +1,4 @@
+import { fullUrl } from "../../utils/functions";
 import PagePill from "../UI/PagePill/PagePill";
 
 const HelpMorePeople = () => {
@@ -23,7 +24,7 @@ const HelpMorePeople = () => {
           <img
             alt="Home Hero"
             className="rounded w-full xl:rounded-xl"
-            src="./images/image-about-our-mission-small.webp"
+            src={fullUrl("images/image-about-our-mission-small.webp")}
           />
         </div>
       </div>

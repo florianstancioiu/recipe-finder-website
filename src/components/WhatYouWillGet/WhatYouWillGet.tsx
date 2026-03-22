@@ -2,6 +2,7 @@ import WholeFoodRecipesIcon from "../../images/icon-whole-food-recipes.svg?react
 import MinimumFussIcon from "../../images/icon-minimum-fuss.svg?react";
 import SearchInSecondsIcon from "../../images/icon-search-in-seconds.svg?react";
 import SquiggleSvg from "../../images/pattern-squiggle-1.svg?react";
+import { fullUrl } from "../../utils/functions";
 
 const WhatYouWillGet = () => {
   return (
@@ -11,7 +12,7 @@ const WhatYouWillGet = () => {
       <div className="px-4 mb-8 md:px-8 md:pb-20 md:mb-20 border-b border-neutral-300 relative z-10 xl:max-w-dsktp-md xl:mx-auto">
         <div className="bg-neutral-0 rounded mb-16 p-1 md:mb-20 xl:rounded-xl">
           <img
-            src="./images/image-home-hero-large.webp"
+            src={fullUrl("images/image-home-hero-large.webp")}
             alt="Home Hero"
             className="rounded w-full xl:rounded-xl"
           />

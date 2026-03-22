@@ -1,3 +1,5 @@
+import { fullUrl } from "../../utils/functions";
+
 const BeyondThePlate = () => {
   return (
     <div className="px-4 pt-12 mb-12 md:px-8 md:pt-20 md:mb-20 xl:max-w-dsktp-md xl:mx-auto xl:flex xl:justify-between xl:items-center">
@@ -20,7 +22,7 @@ const BeyondThePlate = () => {
           <img
             alt="Home Hero"
             className="rounded w-full xl:rounded-xl"
-            src="./images/image-about-beyond-the-plate-small.webp"
+            src={fullUrl("images/image-about-beyond-the-plate-small.webp")}
           />
         </div>
       </div>

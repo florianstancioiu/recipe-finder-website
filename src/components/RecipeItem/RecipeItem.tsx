@@ -4,6 +4,7 @@ import CookSvg from "../../images/icon-cook-time.svg?react";
 
 import Link from "../UI/Link/Link";
 import { type Recipe } from "../../pages/Recipes/Recipes";
+import { fullUrl } from "../../utils/functions";
 
 export type RecipeItemProps = Omit<Recipe, "ingredients" | "instructions">;
 
@@ -21,7 +22,11 @@ const RecipeItem = ({
   return (
     <div className="mt-6 rounded-xl bg-neutral-0 p-2 border border-neutral-300 md:mt-8 xl:mt-0 xl:flex xl:flex-col xl:justify-between">
       <div className="mb-4">
-        <img className="rounded-xl w-full" src={image.large} alt={title} />
+        <img
+          className="rounded-xl w-full"
+          src={fullUrl(image.large)}
+          alt={title}
+        />
       </div>
       <div className="xl:flex xl:flex-col xl:justify-between ">
         <div className="px-2 mb-4 ">
