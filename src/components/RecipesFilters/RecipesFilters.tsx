@@ -23,9 +23,9 @@ const RecipesFilters = ({ filters, onChange }: RecipesFilters) => {
   }, [JSON.stringify(localFilters)]);
 
   const onPrepClick = (option: DropdownOption) => {
-    setLocalFilters({
-      ...localFilters,
-      prepOptions: localFilters.prepOptions
+    setLocalFilters((prevLocalFilters) => ({
+      ...prevLocalFilters,
+      prepOptions: prevLocalFilters.prepOptions
         .map((prepOption) => ({ ...prepOption, isActive: false }))
         .map((prepOption) => {
           if (prepOption.id === option.id) {
@@ -37,23 +37,23 @@ const RecipesFilters = ({ filters, onChange }: RecipesFilters) => {
 
           return prepOption;
         }),
-    });
+    }));
   };
 
   const onPrepClear = () => {
-    setLocalFilters({
-      ...localFilters,
-      prepOptions: localFilters.prepOptions.map((prepOption) => ({
+    setLocalFilters((prevLocalFilters) => ({
+      ...prevLocalFilters,
+      prepOptions: prevLocalFilters.prepOptions.map((prepOption) => ({
         ...prepOption,
         isActive: false,
       })),
-    });
+    }));
   };
 
   const onCookClick = (option: DropdownOption) => {
-    setLocalFilters({
-      ...localFilters,
-      cookOptions: localFilters.cookOptions
+    setLocalFilters((prevLocalFilters) => ({
+      ...prevLocalFilters,
+      cookOptions: prevLocalFilters.cookOptions
         .map((cookOption) => ({ ...cookOption, isActive: false }))
         .map((cookOption) => {
           if (cookOption.id === option.id) {
@@ -65,24 +65,24 @@ const RecipesFilters = ({ filters, onChange }: RecipesFilters) => {
 
           return cookOption;
         }),
-    });
+    }));
   };
 
   const onCookClear = () => {
-    setLocalFilters({
-      ...localFilters,
-      cookOptions: localFilters.cookOptions.map((cookOption) => ({
+    setLocalFilters((prevLocalFilters) => ({
+      ...prevLocalFilters,
+      cookOptions: prevLocalFilters.cookOptions.map((cookOption) => ({
         ...cookOption,
         isActive: false,
       })),
-    });
+    }));
   };
 
   const onSearchChange = (searchKeyword: string) => {
-    setLocalFilters({
-      ...localFilters,
+    setLocalFilters((prevLocalFilters) => ({
+      ...prevLocalFilters,
       searchKeyword,
-    });
+    }));
   };
 
   return (
