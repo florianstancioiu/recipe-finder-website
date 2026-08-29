@@ -28,7 +28,7 @@ const Dropdown = ({
   const baseClasses = "mb-3 relative";
   const mergedClasses = cn(
     baseClasses,
-    className !== undefined ? className : ""
+    className !== undefined ? className : "",
   );
 
   const onClickTitleHandler = () => {
@@ -57,7 +57,7 @@ const Dropdown = ({
         {children}
       </div>
       <ul
-        className={`list-none bg-neutral-0 w-56 p-2 rounded-lg border border-neutral-400 ${optionsClasses}`}
+        className={`list-none bg-neutral-0 w-56 p-2 rounded-lg border border-neutral-400 z-10 ${optionsClasses}`}
       >
         {options.map((option) => (
           <li
