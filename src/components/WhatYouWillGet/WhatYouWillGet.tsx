@@ -7,7 +7,7 @@ import { fullUrl } from "../../utils/functions";
 const WhatYouWillGet = () => {
   return (
     <div className="w-full relative">
-      <SquiggleSvg className="absolute w-full h-full left-0 top-[-45%] xl:top-[-35%]" />
+      <SquiggleSvg className="absolute w-full h-full left-0 top-[-45%] xl:top-[-35%] hidden-on-large-desktop" />
 
       <div className="px-4 mb-8 md:px-8 md:pb-20 md:mb-20 border-b border-neutral-300 relative z-10 xl:max-w-dsktp-md xl:mx-auto">
         <div className="bg-neutral-0 rounded mb-16 p-1 md:mb-20 xl:rounded-xl">
